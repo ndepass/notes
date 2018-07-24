@@ -1,0 +1,89 @@
+Git operations:
+
+    - Clone repo
+       git clone ssh://git@github.com/ndepass/[project name].git
+
+    - Reset repo
+       git reset HEAD (take edits out of staged), git reset --soft HEAD~5 (compress last 5 commits into 1)
+       git reset HARD (throw out commits)
+
+    - Reflog (see all commits - removed, etc.)
+       git reflog
+
+Branch
+
+    - Create branch
+       git branch [name] (then switch)
+       other: git checkout -b [name] (+ [commit-hash] to go back to old commit)
+
+    - Delete branch 
+       git branch -d [name]
+
+    - Switch branch
+       git checkout [name] / git checkout [commit ref] (detached HEAD, read-only, don't make commits)
+       git checkout -- [file name] (writes file from last commit, removes latest changes)
+
+    - Merge branch
+       git merge [other branch] (from master)
+       conflict: open file, remove markers (<<<, >>>, HEAD, etc.), reconcile 2 parts between ===
+       options: --abort (cancel), --squash [target branch] (bring history from branch)
+
+    - Rebase (add another branch's work to master)
+       git checkout [other branch] + git rebase master
+       
+Edit Files
+
+    - Create new file
+
+    - Add files to track
+       git add [file]
+
+    - Remove untracked files
+       git rm [file] / git rm --cached [file]
+       other: git add -u . (files deleted by finder, recursive)
+
+    - Move/rename files
+       git mv [old path] [new path] / git rm + git add (if already moved)
+       other: git add -A . (files moved by finder, recursive)
+
+    - Ignore files, avoid staging files
+       create .gitignore file, add to track, write all file patterns to be ignored in file, commit
+
+    - Stage files
+       git add -u
+
+    - Commit changes
+       git commit -m "[message]" / git commit
+
+Check stats
+
+    - Check repo status
+       git status
+
+    - Track changes 
+       git diff / git diff [file] 
+       options: --staged (staged vs. commit), --HEAD (vs. last commit), --color-words, --word-diff, --stats 
+
+    - Check history
+       git log (options: --graph, --all, --oneline, --stat (files), --patch (shows diff), --decorate (labels)
+       other: -M -- follow (history across a move)
+
+Remote repo
+
+    - Get remote repo
+       git remote add [destination name] [URL to destination] (change URL with set-url [new URL])
+
+    - Remove remote repo
+       git remote rm [name]
+
+    - See remotes
+       git remove -v
+
+    - Fetch remote info
+       git fetch [name]
+    
+    - Pull remote info (fetch + merge)
+       git pull [name] (ex. origin) 
+
+    - Push to repo
+       git push [name] / git push -u origin master
