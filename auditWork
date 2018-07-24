@@ -9,6 +9,12 @@ New area of audit: Pubsubs
 
 ================== old notes ==================
 
+Audit Log: https://www.enterpriseready.io/features/audit-log/
+
+In CQRS ex.
+   have handlers for all command methods to make domain event, log event into repo, and then execute command
+
+
 Audit everything you can do:
 
 

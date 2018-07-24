@@ -3,3 +3,8 @@ New topics to study:
 - Unit testing (granular, testing helpers, not whole acceptance test)
 - Acceptance test (when…should assertions, plain English or code)
 - TDD - test driven development
+
+
+Questions:
+
+	1. How to get emacs to stop creating autosaved files (end in ~, added to .gitignore)
