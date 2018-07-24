@@ -1,0 +1,7 @@
+New area of audit: Pubsubs
+
+
+- work with Vu (or Ben Hill) to figure out what these look like (ex. how best to find all subscribers, where to search) 
+- Google pubsubs (another internal IPC method—messengers)
+- Audit publishers and subscribers (function it’s called from and message it’s publishing, and how many subscribers it has/what it’s subscribing to)
+- Look for publish and subscribe methods
