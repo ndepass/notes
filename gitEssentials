@@ -61,7 +61,7 @@ Check stats
        git status
 
     - Track changes 
-       git diff / git diff [file] 
+       git diff / git diff [file] / git diff [branch1] [branch2] > file
        options: --staged (staged vs. commit), --HEAD (vs. last commit), --color-words, --word-diff, --stats 
 
     - Check history
@@ -80,10 +80,11 @@ Remote repo
        git remove -v
 
     - Fetch remote info
-       git fetch [name]
+       git fetch [remote]
     
     - Pull remote info (fetch + merge)
-       git pull [name] (ex. origin) 
+       git pull [remote] (opts: [branch], [local branch]:[remote branch]) 
 
     - Push to repo
-       git push [name] / git push -u origin master
+       git push [remote] / git push -u origin master
+       rejected: (non fast forward, need to pull again) git pull --rebase [remote] [branch] (puts your work over new pull)
