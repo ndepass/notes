@@ -1,0 +1,5 @@
+New topics to study:
+- Git
+- Unit testing (granular, testing helpers, not whole acceptance test)
+- Acceptance test (when…should assertions, plain English or code)
+- TDD - test driven development
