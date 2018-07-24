@@ -77,7 +77,7 @@ Remote repo
        git remote rm [name]
 
     - See remotes
-       git remove -v
+       git remote -v
 
     - Fetch remote info
        git fetch [remote]
