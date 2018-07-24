@@ -7,6 +7,15 @@ New area of audit: Pubsubs
 - Look for publish and subscribe methods
 
 
+- search each topic in github repos for subscribers' handlers
+- handlers for subscribers are usually in service.go (in method: subscriberretry)
+- repo lib-pubsub-messages with all topics 
+
+Audit:
+- all topics published
+- handler methods subscribed to each topic
+- methods topics are published in
+
 ================== old notes ==================
 
 Audit Log: https://www.enterpriseready.io/features/audit-log/
