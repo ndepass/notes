@@ -55,6 +55,9 @@ Edit Files
     - Commit changes
        git commit -m "[message]" / git commit
 
+    - Clean, remove untracked files
+       git clean / git clean -xdf (for ignored files)
+
 Check stats
 
     - Check repo status
