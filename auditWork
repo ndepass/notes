@@ -1,20 +1,4 @@
-New area of audit: Pubsubs
 
-
-- work with Vu (or Ben Hill) to figure out what these look like (ex. how best to find all subscribers, where to search) 
-- Google pubsubs (another internal IPC method—messengers)
-- Audit publishers and subscribers (function it’s called from and message it’s publishing, and how many subscribers it has/what it’s subscribing to)
-- Look for publish and subscribe methods
-
-
-- search each topic in github repos for subscribers' handlers
-- handlers for subscribers are usually in service.go (in method: subscriberretry)
-- repo lib-pubsub-messages with all topics 
-
-Audit:
-- all topics published
-- handler methods subscribed to each topic
-- methods topics are published in
 
 ================== old notes ==================
 
@@ -41,4 +25,18 @@ Agent:
 
 Endpoint
 	registerDevice (get back cert)
+
+
+
+
+Google pubsubs (another internal IPC method—messengers):
+- Audit publishers and subscribers (function it’s called from and message it’s publishing, and how many subscriber\
+s it has/what it’s subscribing to)
+- Look for publish and subscribe methods
+- repo lib-pubsub-messages has all topics
+
+Audit:
+- all topics published
+- handler methods subscribed to each topic
+- methods topics are published in
 
