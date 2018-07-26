@@ -3,12 +3,17 @@ Git operations:
     - Clone repo
        git clone ssh://git@github.com/ndepass/[project name].git
 
+    - Revert
+       git revert [commit]
+       undo all of the changes made in commit and apply to current branch
+
     - Reset repo
-       git reset HEAD (take edits out of staged), git reset --soft HEAD~5 (compress last 5 commits into 1)
+       git reset HEAD (take edits out of staged, can put file instead of HEAD)
+       git reset --soft HEAD~5 (compress last 5 commits into 1)
        git reset HARD (throw out commits)
 
     - Reflog (see all commits - removed, etc.)
-       git reflog
+       git reflog, opts: --relative-date, --all
 
 Branch
 
@@ -30,13 +35,12 @@ Branch
 
     - Rebase (add another branch's work to master)
        git checkout [other branch] + git rebase master
+       opts: --continue (call after fixing conflict with 'pull --rebase' merge)
        
 Edit Files
 
-    - Create new file
-
-    - Add files to track
-       git add [file]
+    - Stage Files - Add files to track
+       git add [file] / git add -u (all files)
 
     - Remove untracked files
        git rm [file] / git rm --cached [file]
@@ -48,9 +52,6 @@ Edit Files
 
     - Ignore files, avoid staging files
        create .gitignore file, add to track, write all file patterns to be ignored in file, commit
-
-    - Stage files
-       git add -u
 
     - Commit changes
        git commit -m "[message]" / git commit
@@ -65,7 +66,7 @@ Check stats
 
     - Track changes 
        git diff / git diff [file] / git diff [branch1] [branch2] > file
-       options: --staged (staged vs. commit), --HEAD (vs. last commit), --color-words, --word-diff, --stats 
+       opts: --staged (staged vs. commit), --HEAD (vs. last commit), --color-words, --word-diff, --stats 
 
     - Check history
        git log (options: --graph, --all, --oneline, --stat (files), --patch (shows diff), --decorate (labels)
